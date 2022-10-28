@@ -1,0 +1,123 @@
+:root {
+  --Dark-cyan: #3c8067;
+  --Cream: #f2ebe3;
+  --Very-dark-blue: #1c232b;
+  --Dark-grayish-blue: #6c7289;
+  --White: #ffffff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  max-width: 100%;
+}
+body {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--Cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.box {
+  border-radius: 10px;
+  display: flex;
+  width: 600px;
+  max-width: 100%;
+  overflow: hidden;
+}
+.box > .img {
+  background-image: url("images/image-product-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 300px;
+  max-width: 100%;
+}
+.box .info {
+  background-color: var(--White);
+  padding: 2em;
+}
+.box .info > span {
+  color: var(--Dark-grayish-blue);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.box .info h1 {
+  font-family: 'Fraunces', serif;
+  color: var(--Very-dark-blue);
+  font-size: 2.5em;
+  line-height: 1;
+  margin: .5em 0;
+  animation: translate 1s;
+}
+.box .info p {
+  color: var(--Dark-grayish-blue);
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+.box .info .price {
+  display: flex;
+  align-items: center;
+}
+.box .info .price span:first-child {
+  font-family: 'Fraunces', serif;
+  color: var(--Dark-cyan);
+  font-size: 2.5em;
+  margin-right: 0.5em;
+  animation: translate 1s;
+}
+.box .info .price span:last-child {
+  color: var(--Dark-grayish-blue);
+}
+.box .info .cart {
+  padding: 1em 2em;
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.box .info .cart:hover {
+  background-color: #214236;
+}
+.box .info .cart svg {
+  margin-right: 0.5em;
+}
+@media (max-width: 767px) {
+  .box {
+    width: 400px;
+    flex-direction: column;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  .box > .img {
+    background-image: url("images/image-product-mobile.jpg");
+    height: 270px;
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+@keyframes translate {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
